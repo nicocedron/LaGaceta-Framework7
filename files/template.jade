@@ -2,15 +2,18 @@ doctype html
 html(lang="es")
 	head
 		meta(charset="utf-8")
-		meta(content="IE=edge,chrome=1",http-equiv="X-UA-Compatible")
-		meta(name="viewport",content="width=device-width")
-		title Cartas Web | Mobile
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui")
+		meta(name='apple-mobile-web-app-capable', content='yes')
+		meta(name="apple-mobile-web-app-status-bar-style", content="black")
+		title Gaceta Test | Mobile
 		
 		link(href='http://fonts.googleapis.com/css?family=Lato:300,400|Raleway:400,300,200,600',rel='stylesheet',type='text/css')
 		link(href='css/all.css',rel='stylesheet',type='text/css')
 			
-		script(src="http://code.jquery.com/jquery-2.1.0.min.js")
-		script(src="js/all.js")
 
 	body
 		block content
+
+		script(src="js/Framework7.js")
+		script(src="js/jquery.js")
+		script(src="js/all.js")

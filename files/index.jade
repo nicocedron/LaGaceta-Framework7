@@ -1,4 +1,46 @@
 extends template
 
 block content
-	h1 :D
+	// Panels overlay
+	.panel-overlay
+	// Left panel with reveal effect
+	.panel.panel-right.panel-reveal
+		.content-block
+			p HOLA :B
+
+	// Views
+	.views
+		// Your main view, should have "view-main" class
+		.view.view-main
+			// Top Navbar
+			.navbar
+				.navbar-inner
+					.left#logo
+						img(src="http://m.lagaceta.com.ar/css/img/72.png")
+					.center.sliding Ultimo momento
+					.right
+						a.link.open-panel(href='#', data-panel='right') 
+							i.icon.icon-bars-blue
+
+			// Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes
+			.pages.navbar-through.toolbar-through
+				// Page, data-page contains page name
+				.page(data-page='index') 
+					// Scrollable page content
+					.page-content.pull-to-refresh-content.transitioning#listNotes
+						.pull-to-refresh-layer
+							.preloader
+							.pull-to-refresh-arrow
+						.list-block.media-list
+
+							ul
+								li#template(style="display:none !important")
+									a.item-link.item-content(href='view.html')
+										.item-media(style="background-image:url(http://hhhhold.com/160/d/jpg?1)")
+											
+										.item-inner
+											.item-title-row
+												.item-title Yellow Submarine
+											.item-subtitle Beatles
+											.item-text
+												| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros. Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui laoreet, commodo augue id, pulvinar lacus.
